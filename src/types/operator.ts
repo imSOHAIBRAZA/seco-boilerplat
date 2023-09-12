@@ -1,0 +1,20 @@
+export type Operator = {
+  id: number;
+  business_name: string;
+  address: string;
+  vat: string | null;
+  contact_info: string;
+  activation_date: string | null;
+  subscription_date: string | null;
+  renewal_date: string | null;
+  customer_type: string;
+  created_by: number | null;
+  logo: string | null;
+  distributor_id: number | null;
+  web_store_url: string | null;
+  parent_operator: number | null;
+  parent_business_name: string | null;
+  created_at: string;
+  updated_at: string;
+  sender_email: string | null;
+};

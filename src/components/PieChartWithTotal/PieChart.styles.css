@@ -1,0 +1,15 @@
+.pie_chart_wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.pie_chart_wrapper .apexcharts-legend.apexcharts-align-center.apx-legend-position-right {
+  height: fit-content;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+
+.chart_legend_sub_label {
+  color: #afb5c0;
+  margin-left: 14px;
+}

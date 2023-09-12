@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="keywords"
+      content="Intelligent,IOT,Artificial,Intelligence,AI Smart,Buildings,Secure,Scalable"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>EV Charger Manager</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .splash_container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .splash_loader {
+        animation: zoom-in-zoom-out 1s ease infinite;
+      }
+      @keyframes zoom-in-zoom-out {
+        0% {
+          width: 200px;
+        }
+        50% {
+          width: 215px;
+        }
+        100% {
+          width: 200px;
+        }
+      }
+    </style>
+    <script>
+      (async () => {
+        const rawResponse = await fetch(`https://api.ev-charger.secomind.ai/web-config`);
+        const content = await rawResponse.json();
+        const chartColors = JSON.parse(content.data.chart_color)
+        const config = {
+          meta: {
+            name: content.data.name,
+            title: content.data.title,
+            description: content.data.description,
+            favIcon: content.data.favicon,
+            url: content.data.url,
+            seoImage: content.data.nav_logo,
+          },
+          theme: {
+            primaryColor: content.data.theme_primary_color,
+            secondaryColor: content.data.theme_secondary_color,
+            tertiaryColor: content.data.theme_tertiary_color,
+          },
+          images: {
+            backgroundImage: content.data.background_image,
+            navLogo: content.data.nav_logo,
+          },
+          chartColor: chartColors,
+        };
+        localStorage.setItem("UI_CONFIG", JSON.stringify(config));
+      })();
+    </script>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="splash_container">
+        <img class="splash_loader" src="/nav-logo.png" alt="loading..." />
+      </div>
+    </div>
+  </body>
+</html>

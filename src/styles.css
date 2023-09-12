@@ -1,0 +1,25 @@
+.MuiTableCell-head .MuiButtonBase-root {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2f3743;
+}
+
+.MuiTableCell-root {
+  font-size: 12px !important;
+  color: #222222 !important;
+}
+
+.MuiTableHead-root .MuiTableRow-root {
+  background-color: #e5e9ef;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded {
+  border: 1px solid #dbdbdb !important;
+  box-shadow: 0px 8px 12px rgba(67, 73, 79, 0.12) !important;
+  border-radius: 12px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

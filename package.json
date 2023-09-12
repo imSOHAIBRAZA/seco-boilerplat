@@ -1,0 +1,96 @@
+{
+  "name": "ev-charging-cloud-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@fontsource/roboto": "^4.5.7",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/lab": "^5.0.0-alpha.93",
+    "@mui/material": "^5.9.1",
+    "@mui/x-date-pickers": "^5.0.0-beta.5",
+    "@react-hook/intersection-observer": "^3.1.1",
+    "@reduxjs/toolkit": "^1.8.3",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.45",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "apexcharts": "^3.36.0",
+    "axios": "^0.27.2",
+    "date-fns": "^2.29.1",
+    "env-cmd": "^10.1.0",
+    "formik": "^2.2.9",
+    "google-map-react": "^2.2.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-csv": "^2.2.2",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "redux-persist": "^6.0.0",
+    "typescript": "^4.7.4",
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "build:development": "env-cmd -f .env.development npm run build",
+    "build:staging": "env-cmd -f .env.staging npm run build",
+    "build:production": "env-cmd -f .env.production npm run build",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
+    "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx,json}",
+    "tsc": "tsc --noEmit",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json}",
+    "type-lint-check": "npm run lint && npm run tsc"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": "^16.0.0",
+    "npm": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/google-map-react": "^2.1.7",
+    "@types/react-csv": "^1.1.3",
+    "@types/react-helmet": "^6.1.5",
+    "@types/redux-persist": "^4.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1"
+  }
+}

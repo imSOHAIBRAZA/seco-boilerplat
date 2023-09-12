@@ -1,0 +1,29 @@
+.custom_tooltip .custom_tooltip_header {
+  padding: 4px 8px;
+  background-color: #e7f6f2;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.custom_tooltip .custom_tooltip_content_wrapper {
+  padding: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  color: #000;
+  font-size: 14px;
+}
+
+.custom_tooltip .custom_tooltip_selected_value {
+  font-weight: 600;
+}
+
+.custom_tooltip .custom_tooltip_indicator {
+  height: 12px;
+  width: 12px;
+  min-height: 12px;
+  min-width: 12px;
+  border-radius: 50%;
+}
